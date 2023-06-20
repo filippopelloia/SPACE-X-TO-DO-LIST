@@ -8,8 +8,8 @@ export default function ToDo() {
 
   const[text, setText] = useState('');
   const[list, setList] = useState([
-    {id: 0, text:'Starship test 2', checked: false}, 
-    {id: 1, text:'Starship test 3', checked: false}
+    {id: 0, text:'Starship Flying Test 2', checked: false}, 
+    {id: 1, text:'Going to Mars', checked: false}
   ]);
 
   // const[check, setCheck] = useState(false);
@@ -29,6 +29,14 @@ export default function ToDo() {
     })
   }
 
+
+  
+  function deleteTask(itemId){
+    setList(prevList => prevList.filter(item => itemId !== item.id))
+  }
+
+
+
   function addTask(){
     if(text !== ''){
       const newTask = {id: list.length, text: text, checked: false};
@@ -44,7 +52,7 @@ export default function ToDo() {
                      testo={item.text} 
                      check={item.checked}
                      checkFunction={(itemId) => checkTask(itemId)} 
-                    //  testoCheckato={testoCheckato()}
+                     deleteFunction={(itemId) => deleteTask(itemId)}
           />
   })
 

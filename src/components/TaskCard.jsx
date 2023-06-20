@@ -12,7 +12,7 @@ export default function TaskCard(props) {
 
   return (
     <div className='task-card'>
-        {props.check ? <h3 style={{textDecoration: 'line-through'}}>
+        {props.check ? <h3 style={{textDecoration: 'line-through', color: 'red'}}>
           {props.testo}
         </h3> 
         : <h3>
@@ -23,7 +23,7 @@ export default function TaskCard(props) {
         <div className='icons'>
             <Checkbox {...label} onClick={() => props.checkFunction(props.itemId)} />
             <EditIcon/>
-            <DeleteIcon/>
+            <DeleteIcon onClick={() => props.deleteFunction(props.itemId)}/>
         </div>
     </div>
   )
