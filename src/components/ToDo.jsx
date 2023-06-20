@@ -7,15 +7,50 @@ import TaskCard from './TaskCard.jsx'
 export default function ToDo() {
 
   const[text, setText] = useState('');
-  const[list, setList] = useState(['Starship test 2', 'Starship test 3']);
+  const[list, setList] = useState([
+    {id: 0, text:'Starship test 2', checked: false}, 
+    {id: 1, text:'Starship test 3', checked: false}
+  ]);
 
-  function addTask(){
-    setList(prevList => [...prevList, text]);
+  // const[check, setCheck] = useState(false);
+
+
+  function checkTask(itemId){
+    setList(prevList => {
+      return prevList.map(item => {
+        if(item.id === itemId){
+          return {
+            ...item,
+            checked: !item.checked
+          };
+        }
+        return item;
+      })
+    })
   }
 
+  function addTask(){
+    if(text !== ''){
+      const newTask = {id: list.length, text: text, checked: false};
+      setList(prevList => [...prevList, newTask]);
+    }
+  }
+
+
+
   const showTasks = list.map(item => {
-    return <TaskCard testo={item} />
+    return <TaskCard key={item.id}
+                     itemId={item.id}
+                     testo={item.text} 
+                     check={item.checked}
+                     checkFunction={() => checkTask()} 
+                    //  testoCheckato={testoCheckato()}
+          />
   })
+
+
+
+  console.log(list);
 
 
   return (
