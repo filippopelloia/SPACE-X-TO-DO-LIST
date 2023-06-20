@@ -1,0 +1,120 @@
+@import url('https://fonts.cdnfonts.com/css/d-din');
+                
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #262626;
+  color: #262626;
+  font-family: 'D-DIN', sans-serif;
+}
+
+h2{
+  margin-top: 20px;
+}
+
+h5{
+  text-align: center;
+  margin-top: 5px;
+}
+
+.app{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.to-do-container{
+  height: 85vh;
+  width: 80%;
+  max-width: 100vh;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.header{
+  height: 12.5vh;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo{
+  width: 32vh;
+  margin-left: 35px;
+  display: block;
+}
+
+.input-container, .list-container{
+  /* background-color: rgb(230, 230, 230); */
+  padding: 2.5vh 5vh;
+}
+
+.input-container{
+    background-color: rgb(230, 230, 230);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17.5px;
+  border-bottom: 1px solid lightgray;
+}
+
+.input-spacex{
+  width: 60%;
+  border: 1px solid gray;
+  padding: 7.5px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.add-btn{
+  padding: 7.5px 12px;
+  background-color: rgb(58, 180, 221);
+  border: 1px solid rgb(58, 180, 221);
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.add-btn:hover{
+  background-color: rgb(101, 193, 224);
+}
+
+.list-container{
+  text-align: center;
+}
+
+.task-section{
+  margin-top: 50px;
+}
+
+.task-card{
+  margin: 15px 0;
+  padding: 12.5px 15px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 7.5px;
+  align-items: center;
+  border: 1px solid gray;
+}
+
+.icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px
+}
+
+svg{
+  cursor: pointer;
+}
