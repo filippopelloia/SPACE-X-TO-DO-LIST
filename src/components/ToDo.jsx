@@ -1,7 +1,5 @@
 import React, {useState} from 'react'
 import logo from '../assets/logo.png'
-import {nanoid} from 'nanoid';
-
 import TaskCard from './TaskCard.jsx'
 
 export default function ToDo() {
@@ -12,7 +10,6 @@ export default function ToDo() {
     {id: 1, text:'Going to Mars', checked: false}
   ]);
 
-  // const[check, setCheck] = useState(false);
 
 
   function checkTask(itemId){
@@ -30,9 +27,28 @@ export default function ToDo() {
   }
 
 
-  
   function deleteTask(itemId){
     setList(prevList => prevList.filter(item => itemId !== item.id))
+  }
+
+
+  function editedText(e){
+    setText(e.target.value);
+  }
+
+
+  function updateTask(itemId, newText){
+    setList(prevList => {
+      return prevList.map(item => {
+      if(item.id === itemId){
+        return {
+          ...item,
+          text: newText
+        };
+      }
+      return item;
+      })
+    })
   }
 
 
@@ -45,7 +61,6 @@ export default function ToDo() {
   }
 
 
-
   const showTasks = list.map(item => {
     return <TaskCard key={item.id}
                      itemId={item.id}
@@ -53,12 +68,15 @@ export default function ToDo() {
                      check={item.checked}
                      checkFunction={(itemId) => checkTask(itemId)} 
                      deleteFunction={(itemId) => deleteTask(itemId)}
+                     editedText={(e) => editedText(e)}
+                     updateTask={(itemId, newText) => updateTask(itemId, newText)}
           />
   })
 
 
 
   console.log(list);
+  console.log(text);
 
 
   return (

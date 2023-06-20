@@ -18,9 +18,9 @@ body{
   font-family: 'D-DIN', sans-serif;
 }
 
-h2{
+/* h2{
   margin-top: 20px;
-}
+} */
 
 h5{
   text-align: center;
@@ -64,20 +64,30 @@ h5{
 }
 
 .input-container{
-    background-color: rgb(230, 230, 230);
+  background-color: rgb(230, 230, 230);
+  border-bottom: 1px solid lightgray;
+}
+
+.input-container, .edit-section{
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 17.5px;
-  border-bottom: 1px solid lightgray;
 }
 
 .input-spacex{
   width: 60%;
+}
+
+.input-spacex, .input-edit{
   border: 1px solid gray;
   padding: 7.5px;
   border-radius: 5px;
   outline: none;
+}
+
+.input-edit{
+  width: 75%;
 }
 
 .add-btn{
@@ -95,6 +105,10 @@ h5{
 
 .list-container{
   text-align: center;
+}
+
+.list-container > h2{
+  margin-top: 20px;
 }
 
 .task-section{
@@ -120,4 +134,9 @@ h5{
 
 svg{
   cursor: pointer;
+}
+
+.title-modal{
+  margin-bottom: 20px;
+  text-align: center;
 }
