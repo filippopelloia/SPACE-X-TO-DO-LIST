@@ -43,7 +43,7 @@ export default function ToDo() {
                      itemId={item.id}
                      testo={item.text} 
                      check={item.checked}
-                     checkFunction={() => checkTask()} 
+                     checkFunction={(itemId) => checkTask(itemId)} 
                     //  testoCheckato={testoCheckato()}
           />
   })
