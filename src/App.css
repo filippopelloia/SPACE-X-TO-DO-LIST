@@ -16,6 +16,7 @@ body{
   background-color: #262626;
   color: #262626;
   font-family: 'D-DIN', sans-serif;
+  overflow: hidden;
 }
 
 /* h2{
@@ -113,6 +114,9 @@ h5{
 
 .task-section{
   margin-top: 50px;
+  padding-right: 2vh;
+  height: 42.5vh;
+  overflow-y: scroll!important;
 }
 
 .task-card{
@@ -139,4 +143,24 @@ svg{
 .title-modal{
   margin-bottom: 20px;
   text-align: center;
+}
+
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 8px; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; 
+  border-radius: 4px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; 
 }
