@@ -12,5 +12,6 @@ Functionality:
 
 ***
 
-![preview](https://github.com/filippopelloia/SPACE-X-TO-DO-LIST/assets/116798172/797866b0-e6cf-4e80-8f61-52795e5c1487)
+![preview](https://github.com/filippopelloia/SPACE-X-TO-DO-LIST/assets/116798172/09dbe05c-5f08-4a70-b57b-4929b2ea2344)
+
 
