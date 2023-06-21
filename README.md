@@ -1,10 +1,10 @@
 ### This is the updated version of the TO-DO APP V1
-1. Number in the National Pokedex.
-2. Name.
-3. Type or Types (such as Fire, Grass, Dark..).
-4. Region of appartenence.
-5. Front image (normal and shiny version)
-6. Which creature is a Legendary Pokemon.
+
+Functionality:
+1. Add new Task.
+2. Remota a Task.
+3. Edit a Task.
+4. Check a completed Task.
 
 ***
 
@@ -12,4 +12,4 @@
 
 ***
 
-![preview](https://user-images.githubusercontent.com/116798172/232806511-e9db2341-cc2c-4861-a5c6-bb9978caa3ca.png)
+![preview](https://github.com/filippopelloia/SPACE-X-TO-DO-LIST/assets/116798172/b85d8b07-0b12-49f0-81d4-8d070c7c8060)
