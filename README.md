@@ -1,4 +1,4 @@
-### This is the updated version of the TO-DO APP V1
+### This is the updated version of the TO-DO APP V1 made with React.js
 
 Functionality:
 1. Add new Task.
